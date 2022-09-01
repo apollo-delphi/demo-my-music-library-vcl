@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E174FE43-AB50-462C-939B-7659C289D323}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MyMusicLibrary.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MyMusicLibrary">
+        <MSBuild Projects="MyMusicLibrary.dproj"/>
+    </Target>
+    <Target Name="MyMusicLibrary:Clean">
+        <MSBuild Projects="MyMusicLibrary.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyMusicLibrary:Make">
+        <MSBuild Projects="MyMusicLibrary.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MyMusicLibrary"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MyMusicLibrary:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MyMusicLibrary:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
