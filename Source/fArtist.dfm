@@ -9,9 +9,9 @@ object frmArtist: TfrmArtist
     Top = 32
     Width = 265
     Height = 21
-    EditLabel.Width = 27
+    EditLabel.Width = 56
     EditLabel.Height = 13
-    EditLabel.Caption = 'Name'
+    EditLabel.Caption = 'Artist Name'
     TabOrder = 0
   end
 end

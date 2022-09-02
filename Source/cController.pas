@@ -30,7 +30,6 @@ implementation
 uses
   Apollo_DB_Core,
   Apollo_ORM_Service,
-  eArtist,
   System.IOUtils,
   System.SysUtils,
   Winapi.Windows;
@@ -66,16 +65,7 @@ begin
 end;
 
 procedure TController.Test(aView: TViewMain);
-var
-  Artist: TArtist;
 begin
-  Artist := TArtist.Create;
-  try
-    Artist.Name := 'Depeche Mode';
-    Artist.Store;
-  finally
-    Artist.Free;
-  end;
 end;
 
 initialization
