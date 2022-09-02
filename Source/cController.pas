@@ -18,6 +18,7 @@ type
   public
     property DBEngine: TSQLiteEngine read FDBEngine;
   published
+    procedure Migrate(aView: TViewMain);
     procedure Test(aView: TViewMain);
   end;
 {$M-}
@@ -62,6 +63,18 @@ begin
 
   FDBEngine.CloseConnection;
   FDBEngine.Free;
+end;
+
+procedure TController.Migrate(aView: TViewMain);
+var
+  Service: TORMService;
+begin
+  Service := TORMService.Create;
+  try
+    Service.Migrate(FDBEngine);
+  finally
+    Service.Free;
+  end;
 end;
 
 procedure TController.Test(aView: TViewMain);

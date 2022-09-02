@@ -21,7 +21,8 @@ uses
   cArtist in 'cArtist.pas',
   Apollo_BindingVCL in '..\Vendors\Apollo_Binding_VCL\Apollo_BindingVCL.pas',
   Apollo_Binding_Core in '..\Vendors\Apollo_Binding_Core\Apollo_Binding_Core.pas',
-  fArtist in 'fArtist.pas' {frmArtist: TFrame};
+  fArtist in 'fArtist.pas' {frmArtist: TFrame},
+  eRelease in 'eRelease.pas';
 
 {$R *.res}
 

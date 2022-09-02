@@ -24,7 +24,9 @@ type
   TViewMain = class(TViewVCLMain)
     pnlLibraryBrowser: TPanel;
     btnTest: TButton;
+    btnMigrate: TButton;
     procedure btnTestClick(Sender: TObject);
+    procedure btnMigrateClick(Sender: TObject);
   private
     FLibraryBrowser: TfrmLibraryBrowser;
   protected
@@ -46,6 +48,11 @@ uses
   cController;
 
 { TViewMain }
+
+procedure TViewMain.btnMigrateClick(Sender: TObject);
+begin
+  FireEvent('Migrate');
+end;
 
 procedure TViewMain.btnTestClick(Sender: TObject);
 begin

@@ -29,4 +29,13 @@ object ViewMain: TViewMain
     TabOrder = 1
     OnClick = btnTestClick
   end
+  object btnMigrate: TButton
+    Left = 447
+    Top = 408
+    Width = 75
+    Height = 25
+    Caption = 'btnMigrate'
+    TabOrder = 2
+    OnClick = btnMigrateClick
+  end
 end
